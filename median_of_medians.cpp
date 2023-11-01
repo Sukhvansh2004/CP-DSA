@@ -12,7 +12,7 @@ vector<int> insertion(vector<int> arr){
             j--;
         }
     }
-    return arr; sss
+    return arr; 
 }
 
 int median_of_median(vector<int> &arr, int r){

@@ -10,7 +10,7 @@ class Boxer{
 };
 struct Comp{
     bool operator()(const Boxer& a, const Boxer& b){
-        return a.strength>b.strength;
+        return a.strength<b.strength;
     }
 };
 

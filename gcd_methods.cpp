@@ -13,9 +13,10 @@ int main(){
     auto s1=chrono::high_resolution_clock::now();
     int *a1=new int[x]{};
     int *a2=new int[y]{};
-    int j1,j2=0;
+    int j1(0), j2(0);
     for(int i=1;i<=x;i++){
         if(x%i==0){
+            cout<<j1<<' ';
             a1[j1++]=i;
         }
     }
@@ -47,18 +48,17 @@ int main(){
     //Using Euclidean Algorithm
 
     auto s2=chrono::high_resolution_clock::now();    
-     while(true){
+    while(true){
         if(x1>y1){
-            x1=x1-y1;
-        }
-        else if(y1>x1){
-            y1=y1-x1;
+            x1=x1%y1;
+            if(x1 == 0) break;
         }
         else{
-            break;
+            y1=y1%x1;
+            if(y1 ==0) break;
         }
     }
-    cout<<"The GCD (using Euclidean Algorithm) is : "<<x1<<endl;
+    cout<<"The GCD (using Euclidean Algorithm) is : "<<max(x1,y1)<<endl;
     auto e2=chrono::high_resolution_clock::now();
 
 cout<<endl;

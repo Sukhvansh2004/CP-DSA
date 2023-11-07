@@ -1,11 +1,13 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <queue>
 
 using namespace std;
 
 
 int minDistance(vector<int>& dist, vector<bool>& visited) {
   int min_index = -1;
-  int min_dist = INT_MAX;
+  int min_dist = INT32_MAX;
   for (int i = 0; i < dist.size(); i++) {
     if (!visited[i] && dist[i] < min_dist) {
       min_dist = dist[i];
